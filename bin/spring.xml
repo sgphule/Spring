@@ -5,6 +5,16 @@
 
 <beans>
 	<bean id="triangle" class="org.sudarshan.Triangle">
-	<property name="type" value="Equilateral"> </property>
+
+<!--<property name="type" value="Equilateral"> </property> 
+	<constructor-arg value="Equilateral"></constructor-arg>
+	<constructor-arg value="27"></constructor-arg>   
+	<constructor-arg type="int" value="27"></constructor-arg> 
+	<constructor-arg type="java.lang.String" value="27"></constructor-arg> 
+-->
+	
+	<constructor-arg index ="0" value="Equilateral"></constructor-arg>
+	<constructor-arg index ="1" value="27"></constructor-arg>
+	
 	</bean>
 </beans>
