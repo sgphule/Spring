@@ -4,6 +4,7 @@
 ]>
 
 <beans>
-	<bean id="triangle" class="org.sudarshan.Triangle"/>
-	
+	<bean id="triangle" class="org.sudarshan.Triangle">
+	<property name="type" value="Equilateral"> </property>
+	</bean>
 </beans>
