@@ -4,24 +4,20 @@
 ]>
 
 <beans>
-	<bean id="triangle" class="org.sudarshan.Triangle">
-		<property name="points">
-		<list>
-			<ref bean="zeroPoint"/>
-			<ref bean="point2"/>
-			<ref bean="point3"/>	
-		</list>
-		</property>
+	<bean id="triangle" class="org.sudarshan.Triangle" autowire="byName">
+<!-- <bean id="triangle" class="org.sudarshan.Triangle" autowire="byType"> -->
+<!-- <bean id="triangle" class="org.sudarshan.Triangle" autowire="constructor"> -->
+		
 	</bean>
-	<bean id="zeroPoint" class="org.sudarshan.Point">
+	<bean id="pointA" class="org.sudarshan.Point">
 		<property name="x" value="0"></property>
 		<property name="y" value="0"></property>
 	</bean>	
-	<bean id="point2" class="org.sudarshan.Point">
+	<bean id="pointB" class="org.sudarshan.Point">
 		<property name="x" value="-20"></property>
 		<property name="y" value="0"></property>
 	</bean>
-	<bean id="point3" class="org.sudarshan.Point">
+	<bean id="pointC" class="org.sudarshan.Point">
 		<property name="x" value="20"></property>
 		<property name="y" value="0"></property>
 	</bean>	
