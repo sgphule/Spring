@@ -4,10 +4,9 @@
 ]>
 
 <beans>
-	<bean id="triangle" class="org.sudarshan.Triangle" autowire="byName">
 <!-- <bean id="triangle" class="org.sudarshan.Triangle" autowire="byType"> -->
 <!-- <bean id="triangle" class="org.sudarshan.Triangle" autowire="constructor"> -->
-		
+	<bean id="triangle" class="org.sudarshan.Triangle" autowire="byName">	
 	</bean>
 	<bean id="pointA" class="org.sudarshan.Point">
 		<property name="x" value="0"></property>
