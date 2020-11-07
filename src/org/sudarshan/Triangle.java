@@ -2,8 +2,11 @@ package org.sudarshan;
 
 import java.util.List;
 
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 
-public class Triangle  {
+
+public class Triangle implements InitializingBean, DisposableBean {
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;
@@ -44,6 +47,18 @@ public class Triangle  {
 	}
 	public void cleanUp() {
 		System.out.println("My cleanUp method called for Triangle");
+	}
+
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("DisposableBean method called for Triangle");
+		
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("InitializingBean init method called for Triangle");
+		
 	}
 	
 	
