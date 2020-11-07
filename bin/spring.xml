@@ -4,17 +4,10 @@
 ]>
 
 <beans>
-	<bean id="parenttriangle" class="org.sudarshan.Triangle">
+	<bean id="triangle" class="org.sudarshan.Triangle">
 		<property name="pointA" ref="pointA" />
-	</bean>
-	
-	<bean id="triangle1" class="org.sudarshan.Triangle" parent="parenttriangle">
 		<property name="pointB" ref="pointB" />
 		<property name="pointC" ref="pointC" />
-	</bean>
-	
-	<bean id="triangle2" class="org.sudarshan.Triangle" parent="parenttriangle">
-		<property name="pointB" ref="pointB" />
 	</bean>
 	
 	<bean id="pointA" class="org.sudarshan.Point">

@@ -3,15 +3,13 @@ package org.sudarshan;
 import java.util.List;
 
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.ApplicationContextAware;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 
-public class Triangle{
+public class Triangle implements InitializingBean, DisposableBean{
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;
-	private ApplicationContext context = null;
 		
 	public Point getPointA() {
 		return pointA;
@@ -42,5 +40,16 @@ public class Triangle{
 		System.out.println("Point A = (" + getPointA().getX() + ", " + getPointA().getY() + ")");
 		System.out.println("Point B = (" + getPointB().getX() + ", " + getPointB().getY() + ")");
 		System.out.println("Point C = (" + getPointC().getX() + ", " + getPointC().getY() + ")");
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("InitializingBean init method called for Triangle");
+	}
+
+	@Override
+	public void destroy() throws Exception {
+		System.out.println("DisposableBean destroy method called for Triangle");
+		
 	}
 }
