@@ -4,10 +4,7 @@
 ]>
 
 <beans>
-	<bean id="triangle" class="org.sudarshan.Triangle">
-		<property name="pointA" ref="pointA" />
-		<property name="pointB" ref="pointB" />
-		<property name="pointC" ref="pointC" />
+	<bean id="triangle" class="org.sudarshan.Triangle" autowire="byName" init-method="myInit" destroy-method="cleanUp">
 	</bean>
 	
 	<bean id="pointA" class="org.sudarshan.Point">
@@ -19,7 +16,7 @@
 		<property name="y" value="0" />
 	</bean>
 	<bean id="pointC" class="org.sudarshan.Point">
-		<property name="x" value="20" />
+		<property name="x" value="20" /> 
 		<property name="y" value="0" />
 	</bean>	
 </beans>
