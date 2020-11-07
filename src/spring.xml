@@ -3,10 +3,12 @@
 <!ENTITY contextInclude SYSTEM "org/springframework/web/context/WEB-INF/contextInclude.xml">
 ]>
 
-<beans default-init-method="myInit" default-destroy-method="cleanUp">
-	<bean id="triangle" class="org.sudarshan.Triangle" autowire="byName">
+<beans>
+	<bean id="triangle" class="org.sudarshan.Triangle">
+		<property name="pointA" ref="pointA" />
+		<property name="pointB" ref="pointB" />
+		<property name="pointC" ref="pointC" />
 	</bean>
-	
 	<bean id="pointA" class="org.sudarshan.Point">
 		<property name="x" value="0" />
 		<property name="y" value="0" />
@@ -18,5 +20,6 @@
 	<bean id="pointC" class="org.sudarshan.Point">
 		<property name="x" value="20" /> 
 		<property name="y" value="0" />
-	</bean>	
+	</bean>
+	<bean class="org.sudarshan.DisplayNameBeanPostProcessor"/>	
 </beans>

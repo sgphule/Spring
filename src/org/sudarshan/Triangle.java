@@ -6,7 +6,7 @@ import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
 
-public class Triangle implements InitializingBean, DisposableBean {
+public class Triangle{ //implements InitializingBean, DisposableBean {
 	private Point pointA;
 	private Point pointB;
 	private Point pointC;
@@ -41,7 +41,7 @@ public class Triangle implements InitializingBean, DisposableBean {
 		System.out.println("Point B = (" + getPointB().getX() + ", " + getPointB().getY() + ")");
 		System.out.println("Point C = (" + getPointC().getX() + ", " + getPointC().getY() + ")");
 	}
-	
+	/*
 	public void myInit() {
 		System.out.println("My init method called for Triangle");
 	}
@@ -60,9 +60,5 @@ public class Triangle implements InitializingBean, DisposableBean {
 		System.out.println("InitializingBean init method called for Triangle");
 		
 	}
-	
-	
-	
-	
-	
+	*/	
 }
